@@ -1,8 +1,9 @@
-const express = require("express");
-require("dotenv").config();
+import express from "express";
+import { config } from "dotenv";
+import products from "./data/products.js";
 const app = express(),
-  log = console.log,
-  products = require("./data/products");
+  log = console.log;
+config();
 
 app.get("/", (req, res) => {
   res.send("API is Running");
