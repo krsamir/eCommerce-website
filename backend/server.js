@@ -6,7 +6,7 @@ import productRoutes from "./routes/productRoutes.js";
 const app = express(),
   log = console.log;
 config();
-connectDB();
+// connectDB();
 
 app.get("/", (req, res) => {
   res.send("API is Running");
